@@ -70,3 +70,7 @@ System.out.println("6%s \n", "abc");
 
 //특수문자 \t, \n %%
 System.out.println("소금물의 농도 %% %d \n", 35);
+
+
+여기까지 변수
+
