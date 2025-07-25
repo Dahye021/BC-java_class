@@ -1,6 +1,6 @@
 package day.day03;
 
-public class OperatorRx01 {
+public class OperatorEx01 {
     public static void main(String[] args) {
         //부호 연산
         byte b = 100;

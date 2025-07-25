@@ -1,6 +1,6 @@
 package day.day03;
 
-public class 증강연산 {
+public class OperatorEx05 {
     public static void main(String[] args) {
         int x = 1;
         int y = 1;

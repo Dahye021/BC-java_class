@@ -1,6 +1,6 @@
 package day.day03;
 
-public class 논리연산자 {
+public class OperatorEx02 {
     public static void main(String[] args) {
         int charCode = 'A';
         if((65<= charCode) && (charCode <=90)){

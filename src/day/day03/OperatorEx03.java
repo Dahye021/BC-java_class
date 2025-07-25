@@ -1,6 +1,6 @@
 package day.day03;
 
-public class 비교연산자 {
+public class OperatorEx03 {
     public static void main(String[] args) {
         int n1 = 10;
         int n2 = 10;
