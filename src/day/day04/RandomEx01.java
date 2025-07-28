@@ -1,4 +1,4 @@
-package day04;
+package day.day04;
 
 public class RandomEx01 {
     public static void main(String[] args) {

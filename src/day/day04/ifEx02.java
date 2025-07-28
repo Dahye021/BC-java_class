@@ -1,4 +1,4 @@
-package day04;
+package day.day04;
 
 public class ifEx02 {
     public static void main(String[] args) {
