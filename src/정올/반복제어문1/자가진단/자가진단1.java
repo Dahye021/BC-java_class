@@ -1,4 +1,4 @@
-package 정올.반복제어문1;
+package 정올.반복제어문1.자가진단;
 
 public class 자가진단1 {
     public static void main(String[] args) {
