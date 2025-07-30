@@ -1,39 +1,24 @@
-package 나홀로_연습.연산자.연습문제;
+package java01.day.정올.연산자;
 
 import java.util.Scanner;
 
 public class 연습문제2 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("5개의 수를 입력하시오. ");
-        int a = in.nextInt();
-        int b = in.nextInt();
-        int c = in.nextInt();
-        int d = in.nextInt();
-        int e = in.nextInt();
+        System.out.println("5개의 수를 입력하시오.");
+        int num = sc.nextInt();
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int num3 = sc.nextInt();
+        int num4 = sc.nextInt();
 
-        int result1 = a + 3;
-        int result2 = b - 3;
-        int result3 = c * 3;
-        int result4 = d / 3;
-        int result5 = e % 3;
+        int sum1 = num + 3;
+        int sum2 = num1 - 3;
+        int sum3 = num2 * 3;
+        int sum4 = num3 / 3;
+        int sum5 = num4 % 3;
 
-        String str1 = String.valueOf(a);
-        String str2 = String.valueOf(b);
-        String str3 = String.valueOf(c);
-        String str4 = String.valueOf(d);
-        String str5 = String.valueOf(e);
-
-        System.out.print(a + 3 + " ");
-        System.out.print(b - 3 + " ");
-        System.out.print(c * 3 + " ");
-        System.out.print(d / 3 + " ");
-        System.out.print(e % 3 + " ");
-
-        System.out.println();
-        System.out.printf("%d %d %d %d %d", result1, result2, result3, result4, result5 );
-
-
+        System.out.printf("%d %d %d %d %d", sum1, sum2, sum3, sum4, sum5);
     }
 }
