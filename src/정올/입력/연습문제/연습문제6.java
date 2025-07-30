@@ -2,7 +2,7 @@ package jungol.입력;
 
 import java.util.Scanner;
 
-public class 입력연습문제6 {
+public class 연습문제6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

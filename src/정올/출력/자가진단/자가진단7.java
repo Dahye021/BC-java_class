@@ -1,6 +1,6 @@
 package jungol;
 
-public class 출력자가진단7 {
+public class 자가진단7 {
     public static void main(String[] args) {
 
         int num1, num2, sum;

@@ -1,6 +1,6 @@
 package jungol;
 
-public class 출력연습문제4 {
+public class 연습문제4 {
     public static void main(String[] args) {
 
         System.out.println("   @@");

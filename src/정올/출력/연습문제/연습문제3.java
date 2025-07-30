@@ -1,6 +1,6 @@
 package jungol;
 
-public class 출력연습문제3 {
+public class 연습문제3 {
     public static void main(String[] args) {
 
         System.out.println("세 번째 프로그램입니다.");

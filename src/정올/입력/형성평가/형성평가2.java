@@ -1,6 +1,6 @@
 package java01.day.정올.입력.형성평가;
 
-public class 입력형성평가2 {
+public class 형성평가2 {
     public static void main(String[] args) {
 
         double num = 80.5;

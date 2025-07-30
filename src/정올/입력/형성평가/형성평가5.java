@@ -2,7 +2,7 @@ package java01.day.정올.입력.형성평가;
 
 import java.util.Scanner;
 
-public class 입력형성평가5 {
+public class 형성평가5 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

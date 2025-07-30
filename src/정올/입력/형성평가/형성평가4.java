@@ -2,7 +2,7 @@ package java01.day.정올.입력.형성평가;
 
 import java.util.Scanner;
 
-public class 입력형성평가4 {
+public class 형성평가4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("입력하시오.\n");

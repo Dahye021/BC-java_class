@@ -1,6 +1,6 @@
 package jungol.입력;
 
-public class 입력연습문제5 {
+public class 연습문제5 {
     public static void main(String[] args) {
         double x = 1.234;
         double y = 10.3459;

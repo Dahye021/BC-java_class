@@ -1,6 +1,6 @@
-package jungol.입력;
+package 정올.입력.연습문제;
 
-public class 입력연습문제1 {
+public class 연습문제1 {
     public static void main(String[] args) {
         int a = 10;
         char b = 65;

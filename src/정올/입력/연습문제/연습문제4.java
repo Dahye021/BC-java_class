@@ -1,6 +1,6 @@
 package jungol.입력;
 
-public class 입력연습문제4 {
+public class 연습문제4 {
     public static void main(String[] args) {
         int radius = 5;
         double pi = 3.14; //실수형 자료형 소수점 값 저장

@@ -1,6 +1,6 @@
 package jungol;
 
-public class 출력연습문제7 {
+public class 연습문제7 {
     public static void main(String[] args) {
 
         int num1, num2, sum;

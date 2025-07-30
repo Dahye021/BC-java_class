@@ -2,7 +2,7 @@ package java01.day.정올.입력;
 
 import java.util.Scanner;
 
-public class 입력연습문제8 {
+public class 연습문제8 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("키를 입력하세요.");

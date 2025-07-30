@@ -2,7 +2,7 @@ package java01.day.정올.입력;
 
 import java.util.Scanner;
 
-public class 입력연습문제9 {
+public class 연습문제9 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("두 개의 실수를 입력하시오.");
