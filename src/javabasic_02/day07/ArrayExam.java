@@ -1,6 +1,4 @@
-package java02.day07;
-
-import java.nio.file.ClosedWatchServiceException;
+package javabasic_02.day07;
 
 public class ArrayExam {
     public static void main(String[] args) {

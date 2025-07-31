@@ -1,4 +1,4 @@
-package java02.day07;
+package javabasic_02.day07;
 
 public class Member {
     public String name; //회원의 이름

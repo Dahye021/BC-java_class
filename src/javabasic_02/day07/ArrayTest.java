@@ -1,4 +1,4 @@
-package java02.day07;
+package javabasic_02.day07;
 
 public class ArrayTest {
     public static void main(String[] args) {
