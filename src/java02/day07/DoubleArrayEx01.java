@@ -19,7 +19,7 @@ public class DoubleArrayEx01 {
 
         for (int i = 0; i < scores.length; i++) {
             int sum = 0;
-            System.out.print((i + 1) + "번\t");
+            System.out.print((i + 1) + "번 학생\t");
 
             for (int j = 0; j < scores[i].length; j++) {
                 System.out.print(scores[i][j] + "\t");
