@@ -62,7 +62,5 @@ public class JavaBasic8 {
 
             System.out.println();
         }
-
-        scanner.close();
     }
 }
