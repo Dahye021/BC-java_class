@@ -10,7 +10,31 @@ public class MovieTest {
         movie1.genre = "액션";
         movie1.runningTime = 192;
         movie1.movieLevel = "12세";
+        
+        Movie movie2 = new Movie();
+        movie2.movieTitle = "좀비딸";
 
-        System.out.printf("영화 제목 %s", movie1.movieTitle);
+        Movie movie3 = new Movie();
+        movie3.movieTitle = "노이즈";
+        
+        Movie[] movieList = new Movie[3];
+        movieList[0] = movie1;
+        movieList[1] = movie2;
+        movieList[2] = movie3;
+
+        System.out.printf("첫번째 영화 제목 %s\n", movie1.movieTitle);
+        System.out.printf("두번째 영화 제목 %s\n", movie2.movieTitle);
+        System.out.printf("세번째 영화 제목 %s\n", movie3.movieTitle);
+
+        int i = 1;
+        for (Movie movie : movieList) {
+            System.out.println(i++ + "번째" + movie.movieTitle);
+        }
+
+        for (int j = 0; j < movieList.length; j++) {
+            Movie movie = movieList[j];
+            System.out.println(j + "번째" + movie.movieTitle);
+
+        }
     }
 }
