@@ -13,5 +13,9 @@ public class 연습문제9 {
             String rotated = str.substring(i+1) + str.substring(0, i + 1 - (len == 1 ? 0 : 1));
             System.out.println(rotated);
         }
+
+
+
+
     }
 }
