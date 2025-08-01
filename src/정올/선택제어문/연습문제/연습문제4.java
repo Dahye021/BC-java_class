@@ -1,4 +1,4 @@
-package java01.day.정올.선택제어문;
+package javabasic_01.day.정올.선택제어문;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package java01.day.정올.연산자.연습문제;
+package javabasic_01.day.정올.연산자.연습문제;
 
 import java.util.Scanner;
 

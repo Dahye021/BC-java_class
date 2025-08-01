@@ -1,4 +1,4 @@
-package java01.day.정올.반복제어문2.형성평가;
+package javabasic_01.day.정올.반복제어문2.형성평가;
 
 import java.util.Scanner;
 

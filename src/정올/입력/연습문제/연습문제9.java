@@ -1,4 +1,4 @@
-package java01.day.정올.입력;
+package javabasic_01.day.정올.입력;
 
 import java.util.Scanner;
 
