@@ -1,13 +1,14 @@
-package javabasic_01.day.정올.반복제어문1.자가진단;
+package 정올.반복제어문1.자가진단;
 
 public class 자가진단1 {
     public static void main(String[] args) {
-        int num = 0;
         int i = 1;
-
-        for (i=0; i <= 15; i++ ) {
-            num = i;
-            System.out.println(num);
+        while (i <= 15) {
+            System.out.print(i);
+            if (i < 15) {
+                System.out.print(" ");
+            }
+            i++;
         }
     }
 }

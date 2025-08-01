@@ -9,7 +9,7 @@ public class 자가진단1 {
         char ch = in.next().charAt(0);
 
         for (int i = 1; i <= 20; i++){
-             System.out.println(ch);
+             System.out.print(ch);
         }
 
 

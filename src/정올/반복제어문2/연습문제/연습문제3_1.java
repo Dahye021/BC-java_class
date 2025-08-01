@@ -11,6 +11,6 @@ public class 연습문제3_1 {
         System.out.println("===================");
 
         IntStream intStream = IntStream.rangeClosed(1,20);
-        intStream.filter(n-> n%2 == 1).forEach(e-> System.out.println(e+ " "));
+        intStream.filter(n-> n%2 == 1).forEach(e-> System.out.print(e+ " "));
     }
 }
