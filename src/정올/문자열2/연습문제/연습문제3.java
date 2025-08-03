@@ -3,9 +3,9 @@ package 정올.문자열2.연습문제;
 import java.util.Scanner;
 
 public class 연습문제3 {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         String[] words = {"champion", "class", "apple", "car", "banana"};
-        Scanner sc = new Scanner(System.in);
 
         System.out.print("문자를 입력하세요. ");
         char ch = sc.next().charAt(0);
