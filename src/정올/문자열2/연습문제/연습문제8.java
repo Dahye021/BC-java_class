@@ -1,5 +1,6 @@
 package 정올.문자열2.연습문제;
 
+
 import java.util.Scanner;
 
 public class 연습문제8 {
