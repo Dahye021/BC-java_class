@@ -1,6 +1,6 @@
 package javabasic_02.testtest.첫번째;
 
-public class TestMovie extends Movie {
+public class TestMovie {
  
 	public static void main(String[] args) { 
 		Movie myMovie = new Movie();
