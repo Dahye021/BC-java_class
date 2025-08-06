@@ -1,22 +1,20 @@
 package javabasic_02.testtest.세번째.이;
 
 public class Account {
-    private String accNo;   // 계좌번호
-    private int balance;    // 잔고 (단위: 만원)
+    private String accNo;
+    private int balance;
 
-    // 계좌번호 설정
+
     public void setAccNo(String accNo) {
         this.accNo = accNo;
         System.out.println(accNo + " 계좌가 개설되었습니다.");
     }
 
     public String getAccNo() {
-
         return accNo;
     }
 
     public int getBalance() {
-
         return balance;
     }
 

@@ -9,10 +9,12 @@ public class Movie {
     }
 
     public void setGenre(String genre) {
+
         this.genre = genre;
     }
 
     public void play() {
+
         System.out.println(title + " (" + genre + ") 상영중입니다.");
     }
 }
