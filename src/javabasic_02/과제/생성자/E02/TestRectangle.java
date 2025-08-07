@@ -1,4 +1,4 @@
-package javabasic_02.과제.생성자.이;
+package javabasic_02.과제.생성자.E02;
 
 import java.util.Scanner;
 

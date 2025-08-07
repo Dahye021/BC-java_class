@@ -1,4 +1,4 @@
-package javabasic_02.과제.생성자.일;
+package javabasic_02.과제.생성자.E01;
 
 public class Rectangle {
     private int width;

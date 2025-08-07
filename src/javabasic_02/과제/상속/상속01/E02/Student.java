@@ -1,4 +1,4 @@
-package javabasic_02.과제.상속01.이;
+package javabasic_02.과제.상속.상속01.E02;
 
 public class Student {
     // 필드 (정보 은닉)

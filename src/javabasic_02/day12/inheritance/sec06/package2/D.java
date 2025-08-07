@@ -4,7 +4,6 @@ package javabasic_02.day12.inheritance.sec06.package2;
 import javabasic_02.day12.inheritance.sec06.package1.A;
 
 public class D extends A {
-    private D ;
 
     //생성자 선언
     public D(){
@@ -19,8 +18,6 @@ public class D extends A {
 
 	//메소드 선언
     public void method2(){ // 직접객체 생성해서 사용 안됨
-        A a = new A();
-        a.field = "value";
-        a.method();
+
     }
 }

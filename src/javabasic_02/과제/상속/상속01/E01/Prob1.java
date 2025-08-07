@@ -1,4 +1,4 @@
-package javabasic_02.과제.상속01.일;
+package javabasic_02.과제.상속.상속01.E01;
 
 public class Prob1 {
     public static void main(String[] args){
