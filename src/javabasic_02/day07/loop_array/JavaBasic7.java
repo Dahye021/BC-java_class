@@ -1,4 +1,4 @@
-package javabasic_02.test.loop_array;
+package javabasic_02.day07.loop_array;
 
 public class JavaBasic7 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package javabasic_02.test.loop_array;
+package javabasic_02.day07.loop_array;
 
 import java.util.Scanner;
 
