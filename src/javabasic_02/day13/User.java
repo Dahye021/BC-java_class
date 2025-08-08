@@ -13,6 +13,10 @@ public class User {
 
         //3. 10분후 청소기를 끈다.
 
+        //TV의 최대 볼륨 확인  public static final은 타입.상수명으로 접근
+        System.out.println(RemoteControl.MAX_VOLUME);
+        //TV의 최소 볼륨 확인
+        System.out.println(RemoteControl.MIN_VOLUME);
 
     }
 }
