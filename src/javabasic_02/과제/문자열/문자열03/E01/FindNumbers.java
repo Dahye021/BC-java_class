@@ -1,4 +1,4 @@
-package javabasic_02.과제.문자열.문자열03.일;
+package javabasic_02.과제.문자열.문자열03.E01;
 
 public class FindNumbers {
 

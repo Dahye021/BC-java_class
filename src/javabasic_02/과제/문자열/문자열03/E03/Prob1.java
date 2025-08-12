@@ -1,4 +1,4 @@
-package javabasic_02.과제.문자열.문자열03.삼;
+package javabasic_02.과제.문자열.문자열03.E03;
 
 public class Prob1 {
     public static void main(String[] args) {

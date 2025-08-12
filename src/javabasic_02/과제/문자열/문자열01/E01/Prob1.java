@@ -1,4 +1,4 @@
-package javabasic_02.과제.문자열.문자열01.일;
+package javabasic_02.과제.문자열.문자열01.E01;
 
 public class Prob1 {
     public String leftPad(String str, int size, char padChar) {

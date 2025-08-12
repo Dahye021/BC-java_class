@@ -1,4 +1,4 @@
-package javabasic_02.과제.문자열.문자열03.이;
+package javabasic_02.과제.문자열.문자열03.E02;
 
 public class FindCharacters {
 

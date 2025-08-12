@@ -1,4 +1,4 @@
-package javabasic_02.과제.문자열.문자열01.이;
+package javabasic_02.과제.문자열.문자열01.E02;
 
 import java.util.Scanner;
 
