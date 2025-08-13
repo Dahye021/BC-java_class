@@ -1,4 +1,4 @@
-package javabasic_02.day14;
+package javabasic_02.day15;
 
 public class ExceptionEx01 {
     public static void main(String[] args) {

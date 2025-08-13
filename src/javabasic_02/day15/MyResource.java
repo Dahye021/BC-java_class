@@ -1,4 +1,4 @@
-package javabasic_02.day14;
+package javabasic_02.day15;
 
 public class MyResource implements AutoCloseable {
 

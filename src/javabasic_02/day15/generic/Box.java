@@ -1,4 +1,4 @@
-package javabasic_02.day14.generic;
+package javabasic_02.day15.generic;
 
 public class Box extends Object {
     public Object content;
