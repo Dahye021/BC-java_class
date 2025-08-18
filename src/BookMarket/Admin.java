@@ -1,4 +1,4 @@
-package BookMarket;
+package com.market.member;
 
 public class Admin extends Person {
 	private String id = "Admin";
@@ -8,11 +8,6 @@ public class Admin extends Person {
 		super(name, phone);
 	}
 
-	public String getId() {
-		return id;
-	}
-
-	public String getPassword() {
-		return password;
-	}
+	public String getId() { return id; }
+	public String getPassword() { return password; }
 }

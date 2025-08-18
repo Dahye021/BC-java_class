@@ -1,17 +1,27 @@
-package BookMarket;
+package com.market.bookitem;
 
 public class Book extends Item {
-    public Book(String[] bookInfo) {
-        this.id = bookInfo[0];
-        this.title = bookInfo[1];
-        this.price = bookInfo[2];
-        this.author = bookInfo[3];
-        this.description = bookInfo[4];
-        this.category = bookInfo[5];
-        this.date = bookInfo[6];
+    private String author, desc, category, pubDate;
+
+    public Book(String bookID, String title, int price, String author, String desc, String category, String pubDate) {
+        this.bookID = bookID;
+        this.title = title;
+        this.price = price;
+        this.author = author;
+        this.desc = desc;
+        this.category = category;
+        this.pubDate = pubDate;
     }
 
-    public String[] toArray() {
-        return new String[] {id, title, price, author, description, category, date};
-    }
+    @Override
+    public String getBookID() { return bookID; }
+    @Override
+    public String getTitle() { return title; }
+    @Override
+    public int getPrice() { return price; }
+
+    public String getAuthor() { return author; }
+    public String getDesc() { return desc; }
+    public String getCategory() { return category; }
+    public String getPubDate() { return pubDate; }
 }

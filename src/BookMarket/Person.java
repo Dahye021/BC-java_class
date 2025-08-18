@@ -1,4 +1,4 @@
-package BookMarket;
+package com.market.member;
 
 public class Person {
 	private String name;
@@ -16,27 +16,11 @@ public class Person {
 		this.address = address;
 	}
 
-	public String getName() {
-		return name;
-	}
+	public String getName() { return name; }
+	public int getPhone() { return phone; }
+	public String getAddress() { return address; }
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getPhone() {
-		return phone;
-	}
-
-	public void setPhone(int phone) {
-		this.phone = phone;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
+	public void setName(String name) { this.name = name; }
+	public void setPhone(int phone) { this.phone = phone; }
+	public void setAddress(String address) { this.address = address; }
 }

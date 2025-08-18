@@ -1,19 +1,11 @@
-package BookMarket;
+package com.market.bookitem;
 
 public abstract class Item {
-    protected String id;
+    protected String bookID;
     protected String title;
-    protected String price;
-    protected String author;
-    protected String description;
-    protected String category;
-    protected String date;
+    protected int price;
 
-    public String getId() { return id; }
-    public String getTitle() { return title; }
-    public String getPrice() { return price; }
-    public String getAuthor() { return author; }
-    public String getDescription() { return description; }
-    public String getCategory() { return category; }
-    public String getDate() { return date; }
+    public abstract String getBookID();
+    public abstract String getTitle();
+    public abstract int getPrice();
 }
