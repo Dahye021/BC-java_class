@@ -1,4 +1,4 @@
-package com.market.member;
+package BookMarket;
 
 public class User extends Person {
 	public User(String name, int phone) {

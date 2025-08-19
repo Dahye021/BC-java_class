@@ -1,8 +1,5 @@
-package com.market.main;
+package BookMarket;
 
-import com.market.member.*;
-import com.market.bookitem.*;
-import com.market.cart.*;
 import java.util.Scanner;
 import java.io.*;
 
@@ -26,19 +23,31 @@ public class Welcome {
 
 		boolean quit = false;
 		while (!quit) {
-			printMenu();
-			int choice = sc.nextInt();
-			switch (choice) {
-				case 1: printUserInfo(); break;
-				case 2: cart.printCart(); break;
-				case 3: cart.deleteBook(); break;
-				case 4: menuAddToCart(); break;
-				case 5: menuDecreaseQuantity(); break;
-				case 6: menuRemoveCartItem(); break;
-				case 7: menuPrintBill(); break;
-				case 8: quit = true; break;
-				case 9: menuAdminLogin(); break;
-				default: System.out.println("1~9 숫자 입력"); break;
+			try {
+				printMenu();
+				if (!sc.hasNextInt()) {
+					sc.next(); // 잘못 입력된 값 제거
+					throw new CartException("숫자를 입력해야 합니다.");
+				}
+				int choice = sc.nextInt();
+
+				switch (choice) {
+					case 1: printUserInfo(); break;
+					case 2: checkCartEmptyBefore(() -> cart.printCart()); break;
+					case 3: checkCartEmptyBefore(() -> cart.deleteBook()); break;
+					case 4: menuAddToCart(); break;
+					case 5: checkCartEmptyBefore(() -> menuDecreaseQuantity()); break;
+					case 6: checkCartEmptyBefore(() -> menuRemoveCartItem()); break;
+					case 7: checkCartEmptyBefore(() -> menuPrintBill()); break;
+					case 8: quit = true; break;
+					case 9: menuAdminLogin(); break;
+					default: throw new CartException("메뉴는 1~9 사이에서 선택해야 합니다.");
+				}
+			} catch (CartException e) {
+				System.out.println("오류: " + e.getMessage());
+			} catch (Exception e) {
+				System.out.println("예기치 못한 오류: " + e.getMessage());
+				e.printStackTrace();
 			}
 		}
 	}
@@ -67,6 +76,8 @@ public class Welcome {
 		if (idx >= 0 && idx < bookCount) {
 			if (!cart.isCartInBook(books[idx].getBookID()))
 				cart.insertBook(books[idx]);
+		} else {
+			System.out.println("잘못된 도서 번호입니다.");
 		}
 	}
 
@@ -77,13 +88,19 @@ public class Welcome {
 			int q = cart.mCartItem[idx].getQuantity();
 			if (q > 1) cart.mCartItem[idx].setQuantity(q - 1);
 			else cart.removeCart(idx);
+		} else {
+			System.out.println("잘못된 항목 번호입니다.");
 		}
 	}
 
 	static void menuRemoveCartItem() {
 		System.out.print("삭제할 항목 번호: ");
 		int idx = sc.nextInt();
-		cart.removeCart(idx);
+		if (idx >= 0 && idx < cart.mCartCount) {
+			cart.removeCart(idx);
+		} else {
+			System.out.println("잘못된 항목 번호입니다.");
+		}
 	}
 
 	static void menuPrintBill() {
@@ -143,6 +160,15 @@ public class Welcome {
 					books[bookCount++] = new Book(arr[0], arr[1], Integer.parseInt(arr[2]), arr[3], arr[4], arr[5], arr[6]);
 				}
 			}
+		} catch(FileNotFoundException e){
+			System.out.println("book.txt 파일이 없습니다. 새로 생성됩니다.");
 		} catch(Exception e){ e.printStackTrace(); }
+	}
+
+	static void checkCartEmptyBefore(Runnable action) throws CartException {
+		if (cart.mCartCount == 0) {
+			throw new CartException("장바구니가 비어있습니다.");
+		}
+		action.run();
 	}
 }

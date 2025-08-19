@@ -1,4 +1,4 @@
-package com.market.bookitem;
+package BookMarket;
 
 public abstract class Item {
     protected String bookID;

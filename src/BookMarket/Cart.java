@@ -1,6 +1,8 @@
-package com.market.cart;
+package BookMarket;
 
-import com.market.bookitem.Book;
+import java.util.HashMap;
+import java.util.Map;
+import BookMarket.Book;
 
 public class Cart implements CartInterface {
     public CartItem[] mCartItem = new CartItem[100];

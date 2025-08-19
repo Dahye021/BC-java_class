@@ -1,4 +1,4 @@
-package com.market.bookitem;
+package BookMarket;
 
 public class Book extends Item {
     private String author, desc, category, pubDate;
