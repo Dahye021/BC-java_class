@@ -12,6 +12,12 @@ public class BoardExample {
     private static final String menuNumberRegex = "[1-4]";
     private static final String checkNumberRegex = "[1-2]";
     private static final String readOptionRegex = "[1-3]";
+    BoardManger boardManger;
+
+    public BoardExample() {}
+    public BoardExample(BoardManger boardManger) {
+        this.boardManger = boardManger;
+    }
 
     // 현재 게시판의 전체 게시물 목록을 출력 기능
     public void list(){
