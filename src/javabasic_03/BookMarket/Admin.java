@@ -1,4 +1,4 @@
-package BookMarket;
+package javabasic_03.BookMarket;
 
 public class Admin extends Person {
 	private String id = "Admin";

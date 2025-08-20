@@ -1,4 +1,4 @@
-package Board_basic_v2;
+package javabasic_03.Board_basic_v2;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

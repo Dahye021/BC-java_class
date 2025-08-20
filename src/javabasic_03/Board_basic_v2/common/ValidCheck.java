@@ -1,6 +1,6 @@
-package Board_basic_v2.common;
+package javabasic_03.Board_basic_v2.common;
 
-import Board_basic_v2.exception.BoardException;
+import javabasic_03.Board_basic_v2.exception.BoardException;
 
 public class ValidCheck {
     private static final String MENU_NUMBER = "^[1-4]$";

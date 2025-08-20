@@ -1,6 +1,4 @@
-package BookMarket;
-
-import BookMarket.Book;
+package javabasic_03.BookMarket;
 
 public interface CartInterface {
     void printBookList(Book[] books);

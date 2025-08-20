@@ -1,4 +1,4 @@
-package Board_basic_v2;
+package javabasic_03.Board_basic_v2;
 
 public class BoardMain {
     public static void main(String[] args) {

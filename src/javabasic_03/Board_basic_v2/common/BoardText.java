@@ -1,4 +1,4 @@
-package Board_basic_v2.common;
+package javabasic_03.Board_basic_v2.common;
 
 public enum BoardText {
     HEADER("\n[게시물 목록]"),

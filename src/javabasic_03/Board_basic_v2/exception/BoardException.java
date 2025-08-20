@@ -1,6 +1,6 @@
-package Board_basic_v2.exception;
+package javabasic_03.Board_basic_v2.exception;
 
-import Board_basic_v2.common.ErrorCode;
+import javabasic_03.Board_basic_v2.common.ErrorCode;
 
 /*
     사용자 정의 Board 예외

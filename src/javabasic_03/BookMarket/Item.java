@@ -1,4 +1,4 @@
-package BookMarket;
+package javabasic_03.BookMarket;
 
 public abstract class Item {
     protected String bookID;

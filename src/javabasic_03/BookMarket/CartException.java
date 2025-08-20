@@ -1,4 +1,4 @@
-package BookMarket;
+package javabasic_03.BookMarket;
 
 public class CartException extends Exception {
     public CartException() {

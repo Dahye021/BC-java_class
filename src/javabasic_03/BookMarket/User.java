@@ -1,4 +1,4 @@
-package BookMarket;
+package javabasic_03.BookMarket;
 
 public class User extends Person {
 	public User(String name, int phone) {
