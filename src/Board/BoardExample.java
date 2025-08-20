@@ -100,7 +100,33 @@ public class BoardExample {
         read(): 게시물 읽기 메소드
      */
     public void read() {
+        System.out.println("\n[게시물 읽기]");
+        Scanner input = new Scanner(System.in);
+        int numberInput = 0;
+        while (true) {
+            try {
+                System.out.print("bno : ");
 
+                numberInput = input.nextInt();
+                if (numberInput < 0 || numberInput > boardManager.getBoardMap().size()) {
+                    throw new IllegalArgumentException("해당 게시물은 존재하지 않습니다.");
+                } else {
+                    Map<String, Board> boardMap = boardManager.getBoardMap();
+                    System.out.println("#".repeat(30));
+                    Board boardOne = boardMap.get(String.valueOf(numberInput));
+                    System.out.println("번호 : " + boardOne.getBno());
+                    System.out.println("제목 : " + boardOne.getBTitle());
+                    System.out.println("내용 : " + boardOne.getBContent());
+                    System.out.println("작성자 : " + boardOne.getBWriter());
+                    System.out.println(String.format(boardOne.getBDate().toString()));
+                    System.out.println("#".repeat(30) + boardOne.getBno());
+                    readOption(numberInput);
+                    break;
+                }
+            } catch (IllegalArgumentException | InputMismatchException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     /*
