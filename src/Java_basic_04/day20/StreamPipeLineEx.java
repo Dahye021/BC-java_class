@@ -25,7 +25,15 @@ public class StreamPipeLineEx {
         IntStream scoreStream = studentStream1.mapToInt(
                 student -> student.getScore()
         );
+        //최종처리(평균 구하기)
+        double averageScore = scoreStream.average().getAsDouble();
+        System.out.println(averageScore);
 
         //방법2 람다식을 주입해서 파이프라인 처리 방식
+        double averageScore2 = studentList.stream()
+                .mapToInt(student -> student.getScore())
+                .average()
+                .getAsDouble();
+        System.out.println(averageScore2);
     }
 }
