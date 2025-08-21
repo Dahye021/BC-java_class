@@ -12,5 +12,7 @@ public class ArrayStreamEx {
         stream.forEach(item -> System.out.println(item+" "));
 
         Integer[] integers = new Integer[]{1,2,3,4,5};
+        Stream<Integer> stream1 = Arrays.stream(integers);
+        stream1.forEach(System.out::println);
     }
 }
