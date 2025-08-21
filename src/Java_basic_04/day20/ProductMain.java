@@ -16,6 +16,7 @@ public class ProductMain {
         products.add(new Product(5, "키보드", "쿠팡", 130000));
 
         Stream<Product> stream = products.stream();
-        stream.forEach(p -> System.out.println(p));
+        stream.forEach(System.out::println);
+//        stream.forEach(p -> System.out.println(p));
     }
 }
