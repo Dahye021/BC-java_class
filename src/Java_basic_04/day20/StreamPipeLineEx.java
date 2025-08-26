@@ -37,11 +37,11 @@ public class StreamPipeLineEx {
 
 
         //방법2 람다식을 주입해서 파이프라인 처리 방식
-        double averageScore2 = studentList.stream()
-                .mapToInt(student -> student.getScore())
-                .average()
-                .getAsDouble();
-        System.out.println(averageScore2);
+         double averageScore2 = studentList.stream()
+                 .mapToInt(student -> student.getScore())
+                 .average()
+                 .getAsDouble();
+         System.out.println(averageScore2);
 
     }
 }

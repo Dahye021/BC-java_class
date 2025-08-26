@@ -53,12 +53,25 @@ public class ObjectInOutEx {
         FileInputStream fis = new FileInputStream("C:/Temp/object.dat");
         ObjectInputStream ois = new ObjectInputStream(fis);
 
-        List<Product> products2 = (List<Product>) ois.readObject();
-        int[] readArr = (int[]) ois.readObject();
-        User[] readUsers = (User[]) ois.readObject();
-        Product[] readProducts = (Product[]) ois.readObject();
+        try{
+            while(true){
+                Object obj = ois.readObject();
+                System.out.println(obj);
+            }
+        } catch (EOFException e){
+            System.out.println("파일의 끝");
+        } finally {
+            ois.close();
+            fis.close();
+        }
 
-        ois.close();
-        fis.close();
+
+//        List<Product> products2 = (List<Product>) ois.readObject();
+//        int[] readArr = (int[]) ois.readObject();
+//        User[] readUsers = (User[]) ois.readObject();
+//        Product[] readProducts = (Product[]) ois.readObject();
+//
+//        ois.close();
+//        fis.close();
     }
 }
