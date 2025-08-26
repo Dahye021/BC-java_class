@@ -27,7 +27,7 @@ public class ParseJsonEx {
 
             JSONArray skill = obj.getJSONArray("skill");
             for (int i = 0; i < skill.length() ; i++) {
-                System.out.println(skill.getJSONObject(i) + " ");
+                System.out.println(skill.get(i) + ", ");
             }
 
         }catch (Exception e) {
