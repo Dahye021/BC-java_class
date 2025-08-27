@@ -1,4 +1,4 @@
-package java_advanced.day23.echo;
+package java_advanced.day23.net.echo;
 
 
 import java.io.DataInputStream;
