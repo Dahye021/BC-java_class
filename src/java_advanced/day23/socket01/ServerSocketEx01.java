@@ -1,7 +1,10 @@
 package java_advanced.day23.socket01;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.Scanner;
 
 public class ServerSocketEx01 {
@@ -27,8 +30,32 @@ public class ServerSocketEx01 {
         stopServer();
     }
     public static  void starServer() {
+        //스레드 Tread : 실행 단위
+        Thread thread = new Thread(){
+            @Override
+            public void run() {
+                try {
+                    serverSocket = new ServerSocket(50001);
+                    System.out.println("[서버] 시작됨!");
+                    while(true) {
+                        System.out.println("\n[서버] 연결 요청을 기다립니다.\n");
+                        //연결 수락
+                        Socket socket = serverSocket.accept();
+                        //연결된 클라이언트의 IP정보 얻을 수 있다
+                        InputSocketAddress ia = (InetSocketAddress)socket.getRemoteSocketAddress();
+                        System.out.println("[서버]" + ia.getAddress() + ":" + ia.getPort() + "의 연결 수락함");
 
+                        //연결 끊기
+                        socket.close();
+                        System.out.println("[서버] 연결 종료");
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
     }
+
 
     public static  void stopServer() {
         try {
