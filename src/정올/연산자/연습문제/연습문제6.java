@@ -1,4 +1,4 @@
-package 나홀로_연습.연산자.연습문제;
+package 개인.나홀로_연습.연산자.연습문제;
 
 import java.util.Scanner;
 

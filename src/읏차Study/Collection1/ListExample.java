@@ -1,4 +1,4 @@
-package Study.Collection1;
+package 읏차Study.Collection1;
 
 import java.util.List;
 

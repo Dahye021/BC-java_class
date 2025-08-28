@@ -1,4 +1,4 @@
-package homework.E05;
+package Assignment.homework.E05;
 
 import java.util.Arrays;
 import java.util.List;

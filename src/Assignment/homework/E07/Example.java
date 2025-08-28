@@ -1,6 +1,5 @@
-package homework.E07;
+package Assignment.homework.E07;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package 나홀로_연습.정올연습.반복제어문2.형성평가;
+package 개인.나홀로_연습.정올연습.반복제어문2.형성평가;
 
 import java.util.Scanner;
 

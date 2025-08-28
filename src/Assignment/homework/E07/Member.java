@@ -1,4 +1,4 @@
-package homework.E07;
+package Assignment.homework.E07;
 
 public class Member {
     private String name;

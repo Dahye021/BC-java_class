@@ -1,6 +1,5 @@
-package 나홀로_연습.연산자.연습문제;
+package 개인.나홀로_연습.연산자.연습문제;
 
-import javax.swing.text.Style;
 import java.util.Scanner;
 
 public class 연습문제5 {

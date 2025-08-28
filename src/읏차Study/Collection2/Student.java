@@ -1,4 +1,4 @@
-package Study.Collection2;
+package 읏차Study.Collection2;
 
 public class Student {
     public int studentNum;
