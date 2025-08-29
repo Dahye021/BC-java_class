@@ -5,29 +5,31 @@ import java.net.*;
 import java.util.*;
 import java.util.concurrent.*;
 
-/**
- * ChatServer: 다중 클라이언트를 처리하는 텍스트 기반 채팅 서버
- * - TCP 기반, 포트는 기본 5000
- * - 각 클라이언트는 개별 스레드에서 처리
- */
 public class ChatServer {
+    //DEFAULT_PORT = 5000 (기본적으로 서버가 열릴 포트 번호)
     private static final int DEFAULT_PORT = 5000;
+    //ServerSocket = 누군가가 접속을 시도하면 ServerSocket으로 받아줌
     private ServerSocket serverSocket;
 
-    // 클라이언트 목록 관리 (닉네임 → 출력 스트림)
+    //Map을 이용하여 String(닉네임), PrintWriter(해당 닉네임의 통신 창구)를 clients라는 변수에 저장
+    //HashMap은 여러 스레드가 동시에 접근하면 문제 발생
+    //이를 해결하기 위해 ConcurrentHashMap을 사용하여 멀티스레드 환경에서도 데이터가 꼬임 없이 안전하게 관리할수 있게 함
     private final Map<String, PrintWriter> clients = new ConcurrentHashMap<>();
 
     public static void main(String[] args) {
         int port = args.length > 0 ? Integer.parseInt(args[0]) : DEFAULT_PORT;
+        //new ChatServer() -> 채팅 서버 객체 생성 / .start(port) -> 서버 시작(해당 포트에서 클라이언트 접속을 기다림)
         new ChatServer().start(port);
     }
 
     public void start(int port) {
         try {
+            //지정한 포트 번호(5000)로 서버 소켓을 생성
+            //해당 포트는 열리게 되고 클라이언트가 접속할 수 있게 됨
             serverSocket = new ServerSocket(port);
             System.out.println("[서버 시작] 포트: " + port);
 
-            while (true) {
+            while (true) { //클라이언트 요청 무한으로 기다리기
                 Socket socket = serverSocket.accept();
                 new ClientHandler(socket).start(); // 클라이언트 스레드 실행
             }
