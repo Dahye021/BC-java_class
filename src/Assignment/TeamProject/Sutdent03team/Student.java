@@ -31,6 +31,7 @@ public class Student implements Serializable {
         }
         total = sum;
 
+        //double로 sum을 타입 변환 후 sum에 합산된 점수를 record리스트에 있는 정수 갯수랑 나눈 후 average변수에 저장
         average = (double) sum / record.size();
 
         if (average >= 90) {
