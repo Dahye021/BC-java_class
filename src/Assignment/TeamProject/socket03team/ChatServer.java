@@ -25,13 +25,12 @@ public class ChatServer {
     public void start(int port) {
         try {
             //지정한 포트 번호(5000)로 서버 소켓을 생성
-            //해당 포트는 열리게 되고 클라이언트가 접속할 수 있게 됨
-            serverSocket = new ServerSocket(port);
+            serverSocket = new ServerSocket(port);  //해당 포트는 열리게 되고 클라이언트가 접속할 수 있게 됨
             System.out.println("[서버 시작] 포트: " + port);
 
-            while (true) { //클라이언트 요청 무한으로 기다리기
-                Socket socket = serverSocket.accept();
-                new ClientHandler(socket).start(); // 클라이언트 스레드 실행
+            while (true) { //클라이언트 요청 무한으로 기다리며 서버는 꺼지지 않고 계속 실행 상태 유지
+                Socket socket = serverSocket.accept();  //클라이언트가 접속 시도 하면 socket객체에 해당 요청을 받아들임
+                new ClientHandler(socket).start(); //start()를 호출하여 클라이언트와의 통신을 병렬처리하여 여러 클라이언트가 동시 접속 가능
             }
         } catch (IOException e) {
             System.err.println("[오류] 서버 종료: " + e.getMessage());
