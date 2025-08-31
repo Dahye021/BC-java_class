@@ -4,20 +4,16 @@ import lombok.Getter;
 
 import java.io.Serializable;
 import java.util.List;
+@Getter
 
 public class Student implements Serializable {
 
     //2. 필요한 필드(변수) 선언
-    @Getter
     String name;
-    @Getter
     private List<Integer> record;
     int score;
-    @Getter
     int total;
-    @Getter
     double average;
-    @Getter
     String grade;
     //클래스 버전을 수동으로 관리하는 번호로 자바가 체크
     private static final long serialVersionUID = 1L;    //객체를 파일에  저장했다가 나중에 불러올 때 클래수 구조가 바뀌었는지 자바가 자동으로 체크
