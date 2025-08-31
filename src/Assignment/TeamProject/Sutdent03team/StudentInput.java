@@ -82,8 +82,20 @@ public class StudentInput implements Serializable {
 
         //HashMap 저장
         void saveData() {
+            try {
+                FileOutputStream fos = new FileOutputStream(file);
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
 
+                oos.writeObject(studentInfo);
+
+                oos.close();
+                fos.close();
+
+                System.out.println("학생 정보가 파일에 저장되었습니다.");
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("파일 저장 중 오류가 발생했습니다.");
+            }
         }
     }
-
 }
