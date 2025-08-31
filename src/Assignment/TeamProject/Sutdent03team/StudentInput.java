@@ -9,11 +9,11 @@ import java.util.Scanner;
 public class StudentInput implements Serializable {
     //student.dat에 HashMap<String, Student>형태로 직렬화 해서 저장
     HashMap<String, Student> studentInfo = new HashMap<>();
-    File file = new File("C:Temp/student.dat");
+    File file = new File("C:/Temp/student.dat");
 
     private class Helper {
 
-        //파일 확인, 불러오기 - 다시 이해
+        //파일 확인, 불러오기
         void loadCheck() {
             try {
                 if (file.exists()) {
@@ -36,9 +36,9 @@ public class StudentInput implements Serializable {
 
         //사용법 안내
         void printUsage() {
-            System.out.println("이름을 입력하세요.");
-            System.out.println("점수는 0~100만 가능합니다.");
-            System.out.println("q,Q 입력시 종료");
+            System.out.println("[학생 성적 입력 프로그램]");
+            System.out.println("점수는 0~100 사이의 정수만 허용됩니다.");
+            System.out.println("이름에 q,Q 입력시 종료");
         }
 
         //입력한 데이터 검증
@@ -46,6 +46,7 @@ public class StudentInput implements Serializable {
             Scanner in = new Scanner(System.in);
 
             while (true) {
+                System.out.print("이름을 입력하세요 : ");
                 String name = in.nextLine();
                 if (name.equalsIgnoreCase("q")) {
                     break;
@@ -64,7 +65,7 @@ public class StudentInput implements Serializable {
                         score = in.nextInt();
                         in.nextLine();
 
-                        if (score < 0 || score > 100) {
+                        if (score >= 0 && score <= 100) {
                             scores.add(score);
                             break;
                         } else {
@@ -97,5 +98,15 @@ public class StudentInput implements Serializable {
                 System.out.println("파일 저장 중 오류가 발생했습니다.");
             }
         }
+    }
+
+    public static void main(String[] args) {
+        StudentInput input = new StudentInput();
+        Helper helper = input.new Helper();
+
+        helper.loadCheck();
+        helper.printUsage();
+        helper.checkkeyAndInputData();
+        helper.saveData();
     }
 }

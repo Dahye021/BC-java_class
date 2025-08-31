@@ -1,17 +1,23 @@
 package Assignment.TeamProject.Sutdent03team;
 
+import lombok.Getter;
+
 import java.io.Serializable;
 import java.util.List;
 
-//1. 직렬화(Serializable)를 가능하게 표시
 public class Student implements Serializable {
 
     //2. 필요한 필드(변수) 선언
+    @Getter
     String name;
+    @Getter
     private List<Integer> record;
     int score;
+    @Getter
     int total;
+    @Getter
     double average;
+    @Getter
     String grade;
     //클래스 버전을 수동으로 관리하는 번호로 자바가 체크
     private static final long serialVersionUID = 1L;    //객체를 파일에  저장했다가 나중에 불러올 때 클래수 구조가 바뀌었는지 자바가 자동으로 체크
@@ -31,7 +37,7 @@ public class Student implements Serializable {
         }
         total = sum;
 
-        //double로 sum을 타입 변환 후 sum에 합산된 점수를 record리스트에 있는 정수 갯수랑 나눈 후 average변수에 저장
+
         average = (double) sum / record.size();
 
         if (average >= 90) {
@@ -46,6 +52,7 @@ public class Student implements Serializable {
             grade = "F";
         }
     }
+
     //toString() 메서드로 재정의하여 보기 좋게 출력
     public String toString() {
         return "이름 : " + name + ", 총점 : " + total + ", 평균 : " + average + ", 학점 : " + grade;
