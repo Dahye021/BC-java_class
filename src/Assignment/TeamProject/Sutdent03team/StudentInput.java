@@ -38,7 +38,7 @@ public class StudentInput implements Serializable {
         void printUsage() {
             System.out.println("[학생 성적 입력 프로그램]");
             System.out.println("점수는 0~100 사이의 정수만 허용됩니다.");
-            System.out.println("이름에 q,Q 입력시 종료");
+            System.out.println("이름에 ^^ 입력시 종료");
         }
 
         //입력한 데이터 검증
@@ -48,9 +48,16 @@ public class StudentInput implements Serializable {
             while (true) {
                 System.out.print("이름을 입력하세요 : ");
                 String name = in.nextLine();
-                if (name.equalsIgnoreCase("q")) {
+                if (name.equals("^^")) {
                     break;
                 }
+
+                //name에 영문, 한글만 쓸 수 있게 함
+                if (!name.matches("[a-zA-Z가-힣]+")) {
+                    System.out.println("이름은 숫자나 특수문자를 포함할 수 없습니다. 다시 입력하세요.");
+                    continue;
+                }
+
                 if (studentInfo.containsKey(name)) {
                     System.out.println("이미 존재하는 이름입니다. 다시 입력하세요.");
                     continue;
@@ -62,14 +69,18 @@ public class StudentInput implements Serializable {
                     int score;
                     while (true) {
                         System.out.print(subject + "점수 입력 (0~100) : ");
-                        score = in.nextInt();
-                        in.nextLine();
 
-                        if (score >= 0 && score <= 100) {
-                            scores.add(score);
-                            break;
-                        } else {
-                            System.out.println("점수는 0~100 범위만 가능합니다. 다시 입력하세요.");
+                        try {
+                            score = Integer.parseInt(in.nextLine());
+
+                            if (score >= 0 && score <= 100) {
+                                scores.add(score);
+                                break;
+                            } else {
+                                System.out.println("점수는 0~100 범위만 가능합니다. 다시 입력해주세요.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("점수는 숫자만 입력 가능합니다. 다시 입력해주세요.");
                         }
                     }
                 }
