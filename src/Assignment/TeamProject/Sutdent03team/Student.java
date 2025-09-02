@@ -7,6 +7,8 @@ import java.util.List;
 @Getter
 
 public class Student implements Serializable {
+    //클래스 버전을 수동으로 관리하는 번호로 자바가 체크 / 객체를 복구할때 비교 할 수있따
+    private static final long serialVersionUID = 1L;    //객체를 파일에  저장했다가 나중에 불러올 때 클래수 구조가 바뀌었는지 자바가 자동으로 체크
 
     //2. 필요한 필드(변수) 선언
     private String name;
@@ -15,8 +17,6 @@ public class Student implements Serializable {
     private int total;
     private double average;
     private String grade;
-    //클래스 버전을 수동으로 관리하는 번호로 자바가 체크
-    private static final long serialVersionUID = 1L;    //객체를 파일에  저장했다가 나중에 불러올 때 클래수 구조가 바뀌었는지 자바가 자동으로 체크
 
     //이름과 점수 리스트를 받도록 생성자를 정의하여 데이터를 받고 calculate()메서드 호출
     public Student(String name, List<Integer> record) {

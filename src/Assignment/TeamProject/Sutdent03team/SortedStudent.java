@@ -83,7 +83,6 @@ public class SortedStudent {
             return;
         }
 
-
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(outputFile))) {
             oos.writeObject(sortedSet);
             System.out.println("결과 파일: " + outputFile.getAbsolutePath());

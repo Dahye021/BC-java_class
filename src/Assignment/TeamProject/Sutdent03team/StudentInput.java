@@ -11,7 +11,7 @@ public class StudentInput implements Serializable {
     HashMap<String, Student> studentInfo = new HashMap<>();
     File file = new File("C:/Temp/student.dat");
 
-    private class Helper {
+    private class InnerClass {
 
         //파일 확인, 불러오기
         void loadCheck() {
@@ -22,7 +22,7 @@ public class StudentInput implements Serializable {
                     ObjectInputStream ois = new ObjectInputStream(fis);
                     //파일 안에 있던 HashMap을 꺼내서 메모리로 가져오기
                     studentInfo = (HashMap<String, Student>) ois.readObject();
-                    ois.close();
+                    ois.close();        // 리소스 누수 방지
                     fis.close();
                 } else{
                     //파일 없으면 새 HashMap생성
@@ -44,7 +44,7 @@ public class StudentInput implements Serializable {
         //입력한 데이터 검증
         void checkkeyAndInputData() {
             Scanner in = new Scanner(System.in);
-
+            // 사용자한테 입력 받으면서 객체로 만들어주는 과정
             while (true) {
                 System.out.print("이름을 입력하세요 : ");
                 String name = in.nextLine();
@@ -113,11 +113,11 @@ public class StudentInput implements Serializable {
 
     public static void main(String[] args) {
         StudentInput input = new StudentInput();
-        Helper helper = input.new Helper();
+        InnerClass innerclass = input.new InnerClass();
 
-        helper.loadCheck();
-        helper.printUsage();
-        helper.checkkeyAndInputData();
-        helper.saveData();
+        innerclass.loadCheck();
+        innerclass.printUsage();
+        innerclass.checkkeyAndInputData();
+        innerclass.saveData();
     }
 }
