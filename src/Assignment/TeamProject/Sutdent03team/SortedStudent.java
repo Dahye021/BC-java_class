@@ -8,7 +8,7 @@ import java.util.Comparator;
 public class SortedStudent {
 
     private HashMap<String, Student> students = new HashMap<>();
-    private TreeSet<Student> sortedSet;         //자동 정렬
+    private TreeSet<Student> sortedSet;         //중복 없는 집합 + 자동 정렬 상태로 저장
     //해당 경로에 파일 객체 생성
     private File outputFile = new File("C:/Temp/orderByAvg.dat");
 
@@ -26,7 +26,7 @@ public class SortedStudent {
             Object obj = ois.readObject();
 
             if (obj instanceof HashMap) {
-                students = (HashMap<String, Student>) obj;
+                students = (HashMap<String, Student>) obj;  //맞으면 형변환 후 저장
                 System.out.println("불러온 학생 수: " + students.size());
             } else {
                 System.out.println("[오류] 파일 내용이 올바르지 않습니다.");
@@ -46,14 +46,14 @@ public class SortedStudent {
             return;
         }
 
-        //정렬 기준을 정의하는 Comparator 람다식으로 인터페이스 호출
-        Comparator<Student> comparator = (s1, s2) -> {
-            //평균 비교 오름차순
-            int cmp = Double.compare(s1.getAverage(), s2.getAverage());
-            return (cmp != 0) ? cmp : s1.getName().compareTo(s2.getName());     //이름기준
-        };
+        //정렬 기준을 정의하는 Comparator 인터페이스를 람다식으로 호출
+//        Comparator<Student> comparator = (s1, s2) -> {
+//            //평균 비교 오름차순
+//            int cmp = Double.compare(s1.getAverage(), s2.getAverage());
+//            return (cmp != 0) ? cmp : s1.getName().compareTo(s2.getName());     //이름기준
+//        };
 
-        sortedSet = new TreeSet<>(comparator);      //TreeSet 객체 생성 시 comparator에 전달
+        sortedSet = new TreeSet<>(new StudentComparator());      //TreeSet 객체 생성 시 comparator에 전달
         sortedSet.addAll(students.values());        //Student 객체들을 TreeSet에 추가
 
         System.out.println("정렬 규칙: 평균 ASC, 평균 동률이면 이름 사전순 ASC");
@@ -83,7 +83,7 @@ public class SortedStudent {
             return;
         }
 
-        //직렬화 해서 연 파일 try with resources구문으로 자동으로 파일 닫히게 구현
+
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(outputFile))) {
             oos.writeObject(sortedSet);
             System.out.println("결과 파일: " + outputFile.getAbsolutePath());
