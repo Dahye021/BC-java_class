@@ -29,7 +29,7 @@ public class StudentOutput {
             if (obj instanceof HashMap){
                 students = (HashMap<String, Student>) obj;
 
-                //calculate 불러온 후 평균, 총점, 학점 재계산
+                //calculate 불러온 후 평균, 총점, 학점 계산
                 for (Student student : datas) {
                     student.calculate();
                 }
@@ -56,13 +56,14 @@ public class StudentOutput {
         }
 
         //정렬을 위해 리스트에 담음
-        datas = new ArrayList<>(students.values());
+//        datas = new ArrayList<>(students.values());
         //오름차순 정렬
-        datas.sort((s1, s2) -> {
-            int cmp = Double.compare(s1.getAverage(), s2.getAverage());
-            if (cmp == 0) return s1.getName().compareTo(s2.getName()); // 평균이 같을 경우 이름으로 오름차순 정렬
-            return cmp;
-        });
+        datas.sort(new StudentComparator());
+//        datas.sort((s1, s2) -> {
+//            int cmp = Double.compare(s1.getAverage(), s2.getAverage());
+//            if (cmp == 0) return s1.getName().compareTo(s2.getName()); // 평균이 같을 경우 이름으로 오름차순 정렬
+//            return cmp;
+//        });
     }
 
     public void printInfo() {
